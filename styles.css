@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 1050px;
+    /* border-width: 1px;
+    border-color: grey;
+    border-style: solid; */
+    margin: 0 auto;
+}
+
+#header {
+    height: 100px;
+    padding: 10px 0;
+}
+
+h1 a {
+    font-weight: 100;
+    font-size: 50px;
+    color: blueviolet;
+    text-decoration: none;
+}
+
+#searchbox {
+    float: right;
+    /* For Chrome/Edge browser */
+    background: linear-gradient(#E4F2B9, #B7E953);
+    /* For Mozilla browser */
+    background: -moz-linear-gradient(#E4F2B9, #B7E953);
+    /* For Opera browser */
+    background: -o-linear-gradient(#E4F2B9, #B7E953);
+    /* For Safari browser */
+    background: -webkit-linear-gradient(#E4F2B9, #B7E953);
+    width: 450px;
+    height: 60px;
+    padding: 20px 20px 0 20px;
+    margin-top: 20px;
+
+
+}
+
+#brand {
+    float: left;
+}
+
+.text {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    color: orangered;
+    font-size: 15px;
+    background: white url(images/search.png) right center no-repeat;
+    border: 1px solid #c8d03e;
+}
+
+.submit {
+    float: right;
+    padding: 5px;
+    background: purple;
+    font-size: 15px;
+    color: antiquewhite;
+    font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+
+#menu {
+    height: 70px;
+    /* For Chrome/Edge browser */
+    background: linear-gradient(#F8F594, #D5D533);
+    /* For Safari browser */
+    background: -webkit-linear-gradient(#F8F594, #D5D533);
+    /* For Opera browser */
+    background: -o-linear-gradient(#F8F594, #D5D533);
+    /* For Mozilla browser */
+    background: -moz-linear-gradient(#F8F594, #D5D533);
+    padding: 7px 0;
+    margin: 20px 0;
+}
+
+ul {
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+    padding: 0 30px;
+    height: 30px;
+    border-right: 1px solid #5D12E7 ;
+}
+
+#menu ul li:last-child {
+    border-right: none;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    color: #5D12E7;
+    line-height: 30px;
+    /* For Safari browser */
+    -webkit-transition: font-size 0.3s ease;
+    /* For Mozilla browser */
+    -moz-transition: font-size 0.3s ease;
+    /* For Opera browser */
+    -o-transition: font-size 0.3s ease;
+    /* For Edge browser */
+    -ms-transition: font-size 0.3s ease;
+    /* For Chrome browser */
+    transition: font-size 0.3s ease;
+}
+
+#menu ul li a:hover, #menu ul li a.active {
+    font-size: 20px;
+    font-weight: bold;
+    color: #B314DB;
+}
+
+#introduction {
+    padding: 25px;
+    margin: 16px 0;
+    /* For Chrome/Edge browser */
+    background: linear-gradient(#E4F2B9, #B7E953);
+    /* For Safari browser */
+    background: -webkit-linear-gradient(#E4F2B9, #B7E953);
+    /* For Mozilla browser */
+    background: -moz-linear-gradient(#E4F2B9, #B7E953);
+    /* For Opera browser */
+    background: -o-linear-gradient(#E4F2B9, #B7E953);
+}
+
+#introduction h3 {
+    font-size: 45px;
+    color: #316901;
+    font-weight: normal;
+}
+
+#introduction p {
+    font-size: 25px;
+    color: #628f19;
+    text-align: justify;
+}
+
+.sidebar {
+    height: 500px;
+    width: 450px;
+    border: 1px solid #baf46f;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+.sidebar h3 {
+    color: #B314DB;
+    font-size: 30px;
+}
+
+.sidebar ul {
+    padding-top: 8px;
+}
+
+#leftsidebar ul li {
+    padding: 4px 0 6px 40px;
+    background: url(images/arrow.png) no-repeat left center;
+}
+
+#rightsidebar ul li {
+    /* Method 1 : Using background() method - Better alignment of image with content */
+    padding: 10px 0 20px 50px;
+    background: url(images/tick.png) no-repeat left center;
+
+    /* Method 2 : Using list-style-immage() method */
+    /* list-style-image: url(images/tick.png);
+    padding: 0 0 20px 50px; */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color:#5D12E7;
+    /* For Safari browser */
+    -webkit-transition: font-size 0.3s ease;
+    /* For Mozilla browser */
+    -moz-transition: font-size 0.3s ease;
+    /* For Opera browser */
+    -o-transition: font-size 0.3s ease;
+    /* For Edge browser */
+    -ms-transition: font-size 0.3s ease;
+    /* For Chrome browser */
+    transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    font-size: 22px;
+    font-weight: bold;
+    color: #B314DB;
+    font-weight: bold;
+}
+
+#leftsidebar {
+    float: left;
+}
+
+#rightsidebar {
+    float: right;
+}
+
+.footer {
+    height: 60px;
+    /* For Chrome/Edge browser */
+    background: linear-gradient(#f6f390, #D5D533);
+    /* For Safari browser */
+    background: -webkit-linear-gradient(#f6f390, #D5D533);
+    /* For Opera browser */
+    background: -o-linear-gradient(#f6f390, #D5D533);
+    /* For Mozilla browser */
+    background: -moz-linear-gradient(#f6f390, #D5D533);
+    padding: 10px 30px;
+    margin-top: 10px;
+}
