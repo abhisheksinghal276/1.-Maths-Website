@@ -1,5 +1,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 @media (min-width: 600px) {
@@ -9,16 +15,21 @@ body {
 }
 
 #container {
-    width: 1050px;
+    width: 90%;
     /* border-width: 1px;
     border-color: grey;
     border-style: solid; */
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #header {
-    height: 100px;
+    /* height: 100px; */
     padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1 a {
@@ -29,7 +40,8 @@ h1 a {
 }
 
 #searchbox {
-    float: right;
+    flex: 50%;
+    /* float: right; */
     /* For Chrome/Edge browser */
     background: linear-gradient(#E4F2B9, #B7E953);
     /* For Mozilla browser */
@@ -38,16 +50,23 @@ h1 a {
     background: -o-linear-gradient(#E4F2B9, #B7E953);
     /* For Safari browser */
     background: -webkit-linear-gradient(#E4F2B9, #B7E953);
-    width: 450px;
-    height: 60px;
-    padding: 20px 20px 0 20px;
-    margin-top: 20px;
+    min-width: 400px;
+    /* height: 60px; */
+    padding: 20px;
+    /* margin-top: 20px; */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
 }
 
 #brand {
-    float: left;
+    /* float: left; */
+    /* margin-left: 5px ; */
+    flex: 50%;
+    min-width: fit-content;
 }
 
 .text {
@@ -74,7 +93,7 @@ h1 a {
 }
 
 #menu {
-    height: 70px;
+    /* height: 70px; */
     /* For Chrome/Edge browser */
     background: linear-gradient(#F8F594, #D5D533);
     /* For Safari browser */
@@ -83,26 +102,25 @@ h1 a {
     background: -o-linear-gradient(#F8F594, #D5D533);
     /* For Mozilla browser */
     background: -moz-linear-gradient(#F8F594, #D5D533);
-    padding: 7px 0;
+    padding: 20px 0;
     margin: 20px 0;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-ul {
-    list-style: none;
-}
-
-#menu ul li {
-    float: left;
+#menu a {
+    /* float: left; */
     padding: 0 30px;
     height: 30px;
     border-right: 1px solid #5D12E7 ;
 }
 
-#menu ul li:last-child {
+#menu a:last-child {
     border-right: none;
 }
 
-#menu ul li a {
+#menu a {
     text-decoration: none;
     font-size: 17px;
     text-transform: uppercase;
@@ -120,10 +138,22 @@ ul {
     transition: font-size 0.3s ease;
 }
 
-#menu ul li a:hover, #menu ul li a.active {
+#menu a:hover, #menu a.active {
     font-size: 20px;
     font-weight: bold;
     color: #B314DB;
+}
+
+/* for small screens, we want our menu to become vertical */
+@media  screen and (max-width: 700px) {
+    #menu {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #menu a {
+        border-right: none;
+    }
 }
 
 #introduction {
@@ -137,6 +167,7 @@ ul {
     background: -moz-linear-gradient(#E4F2B9, #B7E953);
     /* For Opera browser */
     background: -o-linear-gradient(#E4F2B9, #B7E953);
+    border-radius: 20px;
 }
 
 #introduction h3 {
@@ -151,12 +182,25 @@ ul {
     text-align: justify;
 }
 
+/* sidebars class is used to contain the left and right sidebar and to implement Flex properties on both sidebars */
+.sidebars {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* sidebarWrapper class is used to adjust the flex properties of both sidebars more efficiently */
+.sidebarWrapper {
+    padding: 5px;
+    flex: 50%;
+}
+
 .sidebar {
-    height: 500px;
-    width: 450px;
+    height: 100%;
+    width: 100%;
     border: 1px solid #baf46f;
     border-radius: 20px;
     padding: 10px 30px;
+    /* flex: 50%; */
 }
 
 .sidebar h3 {
@@ -206,13 +250,13 @@ ul {
     font-weight: bold;
 }
 
-#leftsidebar {
+/* #leftsidebar {
     float: left;
 }
 
 #rightsidebar {
     float: right;
-}
+} */
 
 .footer {
     height: 60px;
@@ -225,5 +269,6 @@ ul {
     /* For Mozilla browser */
     background: -moz-linear-gradient(#f6f390, #D5D533);
     padding: 10px 30px;
-    margin-top: 10px;
+    border-radius: 20px;
+    margin-top: auto;
 }
